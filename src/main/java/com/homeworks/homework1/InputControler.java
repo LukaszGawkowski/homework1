@@ -21,11 +21,14 @@ public class InputControler {
             List<Integer> list = serwis.getDrawnNumbersList(number);
             System.err.println("Drawn numbers are: " + list);
 
-            Integer maxMinCollections = serwis.getMinOrMaxUsageOfCollections(serwis.getDrawnNumbersList(number),flag);
-            System.err.println();
+            Integer maxMinCollections = serwis.getMinOrMaxUsageOfCollections(list,flag);
+            System.err.println("Finding " + flag + " number with Collections usage.");
+            System.err.println("Check if drawn lists are the same: " + list);
             System.err.println(flag + " number is: " + maxMinCollections);
 
-            Integer maxMinNoCollections = serwis.getMinOrMaxNoCollectionsUsage(serwis.getDrawnNumbersList(number),flag);
+            Integer maxMinNoCollections = serwis.getMinOrMaxNoCollectionsUsage(list,flag);
+            System.err.println("Finding " + flag + " number with NO Collections usage.");
+            System.err.println("Check if drawn lists are the same: " + list);
             System.err.println(flag + " number is: " + maxMinNoCollections);
         }
 

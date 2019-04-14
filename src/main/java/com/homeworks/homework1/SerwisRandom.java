@@ -50,14 +50,14 @@ public class SerwisRandom {
             Integer y = drawnList.get(0);
 
             if("max".equals(flag)){
-                for(int n = 0; n <= drawnList.size(); n++) {
+                for(int n = 1; n <= drawnList.size()-1; n++) {
                     if (y <= drawnList.get(n)) {
                         y = drawnList.get(n);
                     }
                 }
             } else if ("min".equals(flag)){
 
-                for(int n = 0; n <= drawnList.size(); n++) {
+                for(int n = 1; n <= drawnList.size()-1; n++) {
                     if (y >= drawnList.get(n)) {
                         y = drawnList.get(n);
                     }
